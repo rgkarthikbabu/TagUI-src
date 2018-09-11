@@ -1,0 +1,54 @@
+http://siteadmin:admin123@retail2.horizonbluedev.com/
+//user connect_admin pwd admin123
+first = "`FIRST_NAME`"
+last = "`LAST_NAME`"
+mail = "`E_MAIL`"
+ph = "`PH_NUMBER`";
+
+for n from 0 to `[iteration]`
+{
+wait 2
+type edit-name as connect_admin
+type edit-pass as admin123
+click edit-submit
+wait 2
+http://retail2.horizonbluedev.com/hc2/channel/46/instance/78/appointment/step1/0/new
+wait 2
+snap page
+click edit-reference-type
+click Member
+type edit-first as '+first+'
+type edit-last as '+last+'
+click edit-reason
+click Just Looking
+read //*[@id="appointment-step1"]/div/div/div/div/div/div[2]/div[7]/div/div[1]/button/span[1] to drop
+show drop
+click //*[@id="appointment-step1"]/div/div/div/div/div/div[2]/div[7]/div/div[1]/button/span[1]
+click Commercial
+wait 1
+snap page
+read //div[2]/button to button
+show button
+click //div[2]/button
+wait 2
+type edit-email as '+mail+'
+click edit-phone-carrier
+click ABC Network
+type customer-phone as '+ph+'
+click edit-submit
+wait 2
+snap page
+click //span[@class="fa pficon-user"]
+click //span[@class="fa fa-sign-out"]
+wait 1
+snap page
+wait 2
+}
+
+
+
+
+
+
+
+

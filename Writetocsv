@@ -1,0 +1,23 @@
+https://www.goodreads.com/list/show/17347.Books_that_ll_help_you_deliver_stunning_presentations
+
+read //h1[@class="listPageTitle"] to title
+
+echo "title = " + title
+
+num_books = count('//td/a//span[@itemprop="name"]')
+echo "num_books = " + num_books
+
+csv_header = '"Sno", "Title", "URL"\r\n'
+dump csv_header to test1.csv
+
+for (n=1; n<=num_books; n++)
+{
+	read (//td/a//span[@itemprop="name"])['+n+'] to book
+	echo "book = " + book
+
+	read (//td/a/@href)['+n+'] to url2
+	echo "url2 = " + url2
+
+	record = '"' + n + '","' + book + '","' + url2 + '"' 
+    write record to test1.csv
+}

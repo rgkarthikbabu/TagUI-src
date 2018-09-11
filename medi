@@ -1,0 +1,5 @@
+http://staging:m5Q5ccWX4M@medicaresit.horizonbluestaging.com/
+click Supplement
+if url() equals to "http://medicaresit.horizonbluestaging.com/plan-types/medigap-plans"
+echo "Navigated to Medigap View Plans & Pricing"
+write url() to medicare.csv

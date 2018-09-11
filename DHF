@@ -1,0 +1,12 @@
+http://staging:m5Q5ccWX4M@directory.horizonbluestaging.com/ 
+select opd-type as doctors
+select opd-plan as omnia
+save edit-doctor-submit
+show edit-doctor-submit
+click edit-doctor-submit
+wait 20
+snap page
+
+
+
+

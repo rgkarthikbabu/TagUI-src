@@ -1,0 +1,6 @@
+r begin
+a=1;b=2
+c=a+b
+cat(c)
+r finish
+echo r_result
