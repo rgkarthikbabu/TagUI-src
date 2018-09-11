@@ -39,7 +39,6 @@ click edit-phone-carrier
 click ABC Network
 type customer-phone as '+ph[n]+'
 click edit-submit
-wait 2
 snap page
 click //span[@class="fa pficon-user"]
 click //span[@class="fa fa-sign-out"]
